@@ -1,45 +1,23 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1671
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
-{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
-{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
-\paperw11900\paperh16840\margl1440\margr1440\vieww25400\viewh16000\viewkind0
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+Ahmed Fahmy
+Ali El-Said
+Aya Shaker
+Habiba Gamal
 
-\f0\fs24 \cf0 Ahmed Fahmy\
-Ali El-Said\
-Aya Shaker\
-Habiba Gamal\
-\
-This deliverable simulates Tomasulo\'92s algorithm. The inputs can be inputted in 3 different ways. The command line interacts with the user on what to do.\
-For input from a file, the instructions are preceded by \'93.text: /n @<starting address>\'94. The data section followed the instruction section and starts by \'93.data:\'94. Each data input is preceded by \'93@ <address>\'94\
-The program then outputs the time tracing table for all instructions and the required performance metrics. \
-\
-All the tried test cases work.\
-\
+This deliverable simulates Tomasulo's algorithm. The inputs can be inputted in 3 different ways. The command line interacts with the user on what to do.\
+For input from a file, the instructions are preceded by @<starting address>. The data section followed the instruction section and starts by \'93.data:\'94. Each data input is preceded by \'93@ <address>\'94\
+The program then outputs the time tracing table for all instructions and the required performance metrics. 
+
+All the tried test cases work.
+
 3 branch prediction modes are implemented. To change the branch prediction mode, there is a macro at the the top of the source code. Set to 0 if static prediction, 1 if 1 bit prediction and 2 if 2 bit prediction.\
-The program supports labels for branches and jumps when inputting from a file.  \
-\
-Assumptions: \
-\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\sa240\partightenfactor0
-\ls1\ilvl0\cf2 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-RAW dependent hazards do not resume execution in the same cycle as the independent instruction writes.\
-\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-The structural hazards do not resume issuing in the same cycle when the functional unit was emptied.\
-\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-The full ROB hazard does not resume issuing in the same cycle when an ROB entry was emptied.\
-\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-The branch prediction is used in the fetch stage. It is used to fetch the target address of the prediction.\
-\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-The actual branch outcome is acted upon in the commit stage.\
-\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-JALR and RET are handled (pc jumps to their target) in the commit stage.\
-\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-JMP is handled in the fetch stage (similar as branch prediction)\
-\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-For JALR, RET and mispredicted branches, the processor flushes in their commit stage.\
-\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+The program supports labels for branches and jumps when inputting from a file.  
+
+Assumptions: 
+RAW dependent hazards do not resume execution in the same cycle as the independent instruction writes.
+The structural hazards do not resume issuing in the same cycle when the functional unit was emptied.
+The full ROB hazard does not resume issuing in the same cycle when an ROB entry was emptied.
+The branch prediction is used in the fetch stage. It is used to fetch the target address of the prediction.
+The actual branch outcome is acted upon in the commit stage.
+JMP is handled in the fetch stage (similar as branch prediction)
+For JALR, RET and mispredicted branches, the processor flushes in their commit stage.
 For a load dependent on a store, it does not start execution until the store commits. 
-\f1 \
-}
